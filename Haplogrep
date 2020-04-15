@@ -1,0 +1,7 @@
+##Appears that VCF file is too large, not enough memory for analysis so extracted only Mitochondrial reads
+
+nohup vcftools --gzvcf /mnt/hanchardlab/CAFGEN/WES_II_JointCalledData/JointCalled_2_PASSonlyVariants.vcf.gz --chr MT --out Mito_II  --recode
+nohup vcftools --vcf /mnt/hanchardlab/CAFGEN/WES_round_I_JointCalledData/CAfGEN-ALL.PASS.Reannotated.vcf --chr MT --out Mito_I  --recode
+./haplogrep classify --in /mnt/hanchardlab/savannah/Software/HaploGrep2/Mito_I.recode.vcf --format vcf --out Mito_CAFGEN_I_haplogroups.txt
+./haplogrep classify --in /mnt/hanchardlab/savannah/Software/HaploGrep2/Mito_II.recode.vcf --format vcf --out Mito_CAFGEN_II_haplogroups.txt
+
